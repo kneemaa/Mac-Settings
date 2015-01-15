@@ -13,6 +13,8 @@ Install Steps:
 4. Install Powerline
 	 Run "brew install git+git://github.com/Lokaltog/powerline"
 5. Copy .zshrc file to ~/.zshrc
-6. Install the Inconsolata fonts
-7. Add the "Solarized Dark.terminal" profile to the terminal settings
-8. Quit and relaunch terminal
+6. Copy .vimrc file to ~/.vimrc
+7. Install the Inconsolata fonts
+8. Add the "Solarized Dark.terminal" profile to the terminal settings
+9. Quit and relaunch terminal
+
