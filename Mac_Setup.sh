@@ -69,5 +69,8 @@ case $response in
         ;;
 esac
 
+#turn off case sensitivity in terminal
+echo "set completion-ignore-case On" >> ~/.inputrc
+
 clear
 echo "\n [DONE]\n"
