@@ -21,7 +21,7 @@ case $response in
         case $answer in
             [yY][eE][sS]|[yY])
                 echo "Installing Brew Packages..."
-                brew install awscli gettext libtasn1 ossp-uuid readline tmux berkeley-db	hping macvim pkg-config rpm vim cscope libevent	nmap popt snow wget gdbm libmagic openssl python sqlite x
+                brew install awscli gettext libtasn1 ossp-uuid readline tmux berkeley-db hping macvim pkg-config rpm vim cscope libevent nmap popt snow wget gdbm libmagic openssl python sqlite Caskroom/cask/textwrangler
 
                 clear
                 ;;
