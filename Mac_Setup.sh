@@ -21,7 +21,7 @@ case $response in
         case $answer in
             [yY][eE][sS]|[yY])
                 echo "Installing Brew Packages..."
-                brew install gdbm libtasn1 openssl readline unrar gmp libunistring p11-kit rename xz gnutls mtr pkg-config sqlite libdnet nettle task libffi nmap python3 tree awscli gettext ossp-uuid tmux berkeley-db hping macvim rpm vim cscope libevent popt snow wget libmagic python Caskroom/cask/textwrangler 
+                brew install gdbm libtasn1 openssl readline unrar gmp libunistring p11-kit rename xz gnutls mtr pkg-config sqlite libdnet nettle task libffi nmap tree awscli gettext ossp-uuid tmux berkeley-db hping macvim rpm vim cscope libevent popt snow wget libmagic python Caskroom/cask/textwrangler 
 
                 clear
                 ;;
@@ -43,7 +43,7 @@ case $response in
         echo "install powerline"
         brew install git+git://github.com/Lokaltog/powerline
         clear
-        git clone https://github.com/smalldoorman/Mac-Settings.git $HOME/Mac_Settings
+        git clone https://github.com/smalldoorman/Mac-Settings.git $HOME/Mac-Settings
         cd $HOME/Mac_Settings
         cp .zshrc ~/.zshrc
         cp .vimrc ~/.vimrc
@@ -73,4 +73,4 @@ esac
 echo "set completion-ignore-case On" >> ~/.inputrc
 
 clear
-echo "\n [DONE]\n"
+echo "[DONE]"
