@@ -2,8 +2,7 @@
 
 
 #install xcode command line tools (needed for brew)
-echo "Installing Xcode Command Line Tools\n Press enter to continue..."
-xcode-select --install
+echo "Make sure Xcode is installed and the terms and conditions has been accepted..."
 read blank
 
 clear
@@ -41,10 +40,12 @@ read -r -p "Would you like to setup your Terminal now? [Y/N]" response
 case $response in
     [yY][eE][sS]|[yY])
         echo "install powerline"
-        brew install git+git://github.com/Lokaltog/powerline
+        cd $HOME/Mac-Settings
+	git clone git@github.com:powerline/powerline.git
+	rsync -av powerline/powerline /usr/local/lib/python2.7/site-packages/
         clear
         git clone https://github.com/smalldoorman/Mac-Settings.git $HOME/Mac-Settings
-        cd $HOME/Mac_Settings
+        cd $HOME/Mac-Settings
         cp .zshrc ~/.zshrc
         cp .vimrc ~/.vimrc
         cp Incon*/*.otf $HOME/Library/Fonts
