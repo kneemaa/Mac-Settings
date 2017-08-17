@@ -43,6 +43,7 @@ case $response in
         cd $HOME/Mac-Settings
 	git clone git@github.com:powerline/powerline.git
 	rsync -av powerline/powerline /usr/local/lib/python2.7/site-packages/
+	rsync -av powerline/scripts /usr/local/lib/python2.7/site-packages/
         clear
         git clone https://github.com/smalldoorman/Mac-Settings.git $HOME/Mac-Settings
         cd $HOME/Mac-Settings
