@@ -3,7 +3,17 @@
 
 #install xcode command line tools (needed for brew)
 echo "Make sure Xcode is installed and the terms and conditions has been accepted..."
+gcc
 read blank
+
+clear
+echo "Downloading desired Apps"
+sleep 5
+
+wget 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
+wget 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/59.0.2/mac/en-US/Firefox%2059.0.2.dmg'
+wget 'https://download.scdn.co/SpotifyInstaller.zip'
+wget 'http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
 
 clear
 sleep 5
@@ -20,7 +30,7 @@ case $response in
         case $answer in
             [yY][eE][sS]|[yY])
                 echo "Installing Brew Packages..."
-                brew install gdbm libtasn1 openssl readline unrar gmp libunistring p11-kit rename xz gnutls mtr pkg-config sqlite libdnet nettle task libffi nmap tree awscli gettext ossp-uuid tmux berkeley-db hping macvim rpm vim cscope libevent popt snow wget libmagic python Caskroom/cask/textwrangler 
+                brew install awscli docker gettext icu4c libffi libunistring mtr node ossp-uuid pkg-config python3 ruby task unrar wget berkeley-db docker-compose gmp libarchive libidn2 libyaml mysql nuttcp p11-kit popt readline snow telnet xz cmatrix docker-machine gnutls libdnet libmagic lua@5.1 nettle openssl packer pv tmux vim zstd cscope gdbm hping libevent libtasn1 macvim nmap perl python tree watch
 
                 clear
                 ;;
