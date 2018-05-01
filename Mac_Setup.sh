@@ -9,10 +9,10 @@ clear
 echo "Downloading desired Apps"
 sleep 5
 
-# wget 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
-# wget 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/59.0.2/mac/en-US/Firefox%2059.0.2.dmg'
-# wget 'https://download.scdn.co/SpotifyInstaller.zip'
-# wget 'http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
+wget 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
+wget 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/59.0.2/mac/en-US/Firefox%2059.0.2.dmg'
+wget 'https://download.scdn.co/SpotifyInstaller.zip'
+wget 'http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
 
 clear
 sleep 5
