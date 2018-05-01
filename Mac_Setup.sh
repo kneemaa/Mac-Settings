@@ -29,7 +29,7 @@ case $response in
         case $answer in
             [yY][eE][sS]|[yY])
                 echo "Installing Brew Packages..."
-                brew install awscli docker gettext icu4c libffi libunistring mtr node ossp-uuid pkg-config python3 ruby task unrar wget berkeley-db docker-compose gmp libarchive libidn2 libyaml mysql nuttcp p11-kit popt readline snow telnet xz cmatrix docker-machine gnutls libdnet libmagic lua@5.1 nettle openssl packer pv tmux vim zstd cscope gdbm hping libevent libtasn1 macvim nmap perl python tree watch
+                brew install awscli docker gettext icu4c libffi libunistring mtr node ossp-uuid pkg-config ruby task unrar wget berkeley-db docker-compose gmp libarchive libidn2 libyaml mysql nuttcp p11-kit popt readline snow telnet xz cmatrix docker-machine gnutls libdnet libmagic lua@5.1 nettle openssl packer pv tmux vim zstd cscope gdbm hping libevent libtasn1 macvim nmap perl python tree watch
 
                 clear
                 ;;
