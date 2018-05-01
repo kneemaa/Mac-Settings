@@ -3,7 +3,6 @@
 
 #install xcode command line tools (needed for brew)
 echo "Make sure Xcode is installed and the terms and conditions has been accepted..."
-gcc
 read blank
 
 clear
@@ -60,8 +59,9 @@ case $response in
         cp .zshrc ~/.zshrc
         cp .vimrc ~/.vimrc
         cp Incon*/*.otf $HOME/Library/Fonts
+        open Solarized\ Dark.terminal
         sleep 2
-        read -r -p "Please add 'Solarized Dark.terminal' then press Enter to continue..." key
+        read -r -p "Please make 'Solarized Dark.terminal' the default profile then press Enter to continue..." key
 
         ;;
     *)
