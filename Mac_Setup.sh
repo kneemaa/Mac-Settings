@@ -71,6 +71,7 @@ case $response in
 	# rsync -av powerline/powerline /usr/local/lib/python2.7/site-packages/
 	# rsync -av powerline/scripts /usr/local/lib/python2.7/site-packages/
         clear
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
         git clone https://github.com/smalldoorman/Mac-Settings.git $HOME/Mac-Settings
         cd $HOME/Mac-Settings
         cp .zshrc ~/.zshrc
