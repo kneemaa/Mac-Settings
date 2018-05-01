@@ -9,10 +9,10 @@ clear
 echo "Downloading desired Apps"
 sleep 5
 
-wget 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
-wget 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/59.0.2/mac/en-US/Firefox%2059.0.2.dmg'
-wget 'https://download.scdn.co/SpotifyInstaller.zip'
-wget 'http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
+# wget 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
+# wget 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/59.0.2/mac/en-US/Firefox%2059.0.2.dmg'
+# wget 'https://download.scdn.co/SpotifyInstaller.zip'
+# wget 'http://lightheadsw.com/files/releases/com.lightheadsw.Caffeine/Caffeine1.1.1.zip'
 
 clear
 sleep 5
@@ -44,6 +44,20 @@ case $response in
         clear
         ;;
 esac
+clear
+
+read -r -p "Would you like to download your Response Gifs now? [Y/N]" response
+case $response in
+    [yY][eE][sS]|[yY])
+        git clone https://github.com/smalldoorman/Response-Gifs.git $HOME/Response_Gifs
+        ;;
+    *)
+        echo "Ok, not now..."
+        ;;
+esac
+
+#turn off case sensitivity in terminal
+echo "set completion-ignore-case On" >> ~/.inputrc
 
 read -r -p "Would you like to setup your Terminal now? [Y/N]" response
 case $response in
@@ -73,20 +87,7 @@ case $response in
         sleep 5
         ;;
 esac
-clear
 
-read -r -p "Would you like to download your Response Gifs now? [Y/N]" response
-case $response in
-    [yY][eE][sS]|[yY])
-        git clone https://github.com/smalldoorman/Response-Gifs.git $HOME/Response_Gifs
-        ;;
-    *)
-        echo "Ok, not now..."
-        ;;
-esac
-
-#turn off case sensitivity in terminal
-echo "set completion-ignore-case On" >> ~/.inputrc
 
 clear
 echo "[DONE]"
