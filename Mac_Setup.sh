@@ -77,6 +77,7 @@ case $response in
         cp .zshrc ~/.zshrc
         cp .vimrc ~/.vimrc
         cp Incon*/*.otf $HOME/Library/Fonts
+        vim +PluginInstall +qall
         open Solarized\ Dark.terminal
         sleep 2
         read -r -p "Please make 'Solarized Dark.terminal' the default profile then press Enter to continue..." key
