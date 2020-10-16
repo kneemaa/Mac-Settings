@@ -1,11 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
+export GOPATH=/Users/nema/go
+export AWS_PAGER=""
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="spaceship"
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_BATTERY_THRESHOLD=20
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -14,7 +17,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -47,13 +50,14 @@ plugins=python
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git terraform zsh-autosuggestions zsh-syntax-highlighting)
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white,bg=cyan,bold,underline"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="${GOPATH}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -84,5 +88,11 @@ DEFAULT_USER=$USER
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias fucking="sudo"
-alias nyan="telnet nyancat.dakko.us"
+alias tf="terraform"
+alias tps="tf plan | scenery"
+alias tfmt='tf fmt && git commit -am "tf fmt" && git push'
+alias tfp='tf plan -var-file="./vars/$(tf workspace show).tfvars" -lock=false'
+alias reset-okta="rm -f ~/.aws/credentials ~/.okta/profiles ~/.okta/cookies.properties ~/.okta/.current-session"
+alias migrate-state="~/SigSci/awsinfra/attic/terraform-2.0/migrate_backend.sh"
