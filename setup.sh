@@ -27,7 +27,7 @@ case $response in
         case $answer in
             [yY][eE][sS]|[yY])
                 echo "Installing Brew Packages..."
-                brew install docker-compose jq git packer tfenv tmux tree wget vim watch
+                brew install docker-compose jq git packer tfenv tmux tree wget vim watch kubernetes-cli
                 clear
                 ;;
             *)
