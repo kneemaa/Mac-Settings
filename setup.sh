@@ -7,12 +7,6 @@ echo "Make sure Xcode is installed and the terms and conditions has been accepte
 read blank
 
 clear
-echo "Downloading desired Apps"
-sleep 5
-
-wget 'https://download.scdn.co/SpotifyInstaller.zip'
-
-clear
 sleep 5
 
 #install brew
@@ -59,6 +53,10 @@ echo "set completion-ignore-case On" >> ~/.inputrc
 read -r -p "Would you like to setup your Terminal now? [Y/N]" response
 case $response in
     [yY][eE][sS]|[yY])
+      git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+      git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+      ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
       echo "installing zsh"
       sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
       echo "Installing Spaceship"
